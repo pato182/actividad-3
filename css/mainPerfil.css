@@ -74,15 +74,15 @@ section:hover .spark1 {
 @keyframes spark-animation {
     0% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(5);
     }
     50% {
         opacity: 0.5;
-        transform: translate(-100%, -100%) scale(3);
+        transform: translate(-100%, -100%) scale(10);
     }
     100% {
         opacity: 0;
-        transform: translate(-150%, -150%) scale(4);
+        transform: translate(-150%, -150%) scale(15);
     }
 }
 
