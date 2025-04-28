@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --color-primario: #1E1E1E;
+    --color-secundario: #FFD700; 
+    --color-terciario: #cabe7a; 
+}
+
+nav ul {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: block;
+    transition: opacity 0.5s ease, visibility 0.5s, height 1s ease;
+}
+
+nav ul.mostrar {
+    opacity: 1;
+    visibility: visible;
+    height: 150px; 
+}
+
+nav {
+    border-radius: 10%;
+}
+
+.fa-solid.fa-bars {
+    color: var(--color-secundario);
+    cursor: pointer;
+}
+
+li {
+    background-color: var(--color-terciario);
+    border-radius: 30% 10% 30% 10%;
+    margin: 10px;
+    padding: 5px;
+}
+
+@media screen and (min-width: 650px) {
+    .fa-solid.fa-bars {
+        display: none;
+    }
+
+    nav ul {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        display: flex;
+    }
+}

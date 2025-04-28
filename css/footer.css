@@ -7,8 +7,13 @@
 }
 
 footer {
-    text-align: left;
     width: 100vmin;
-    margin-top: auto;
-    margin-left: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    margin: 10px;
 }
