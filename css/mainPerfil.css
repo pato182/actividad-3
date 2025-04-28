@@ -10,7 +10,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 section {
@@ -23,7 +22,9 @@ section {
     border-radius: 50px;
     background: var(--color-terciario);
     margin-top: 25px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Transiciones suaves */
+    margin-bottom: 25px;
+    position: relative; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
 #imgPerfil {
@@ -34,16 +35,85 @@ section {
 }
 
 section:hover {
-    transform: scale(1.08) rotate(2deg); 
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    animation: girar 2s ease;
 }
+
+section:hover::after,
+section:hover::before,
+section:hover .spark1 {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);  /* Forma de estrella */
+    transform: translate(-50%, -50%);
+    animation: spark-animation 0.2s ease-in-out;
+    animation-delay: 2s;
+}
+
+
+section:hover::after {
+    top: 2%;
+    left: 5%;
+}
+section:hover::before {
+    top: -0.5%;
+    left: 50%;
+}
+section:hover .spark1 {
+    top: 2%;
+    left: 96%;
+}
+
+
+
+@keyframes spark-animation {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-100%, -100%) scale(3);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-150%, -150%) scale(4);
+    }
+}
+
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    16.6% {
+        transform: rotate(5deg);
+    }
+    33.3% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    66.6% {
+        transform: rotate(0deg);
+    }
+    83.3% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 
 @media screen and (min-width: 650px) {
     section {
         width: 45vmin;
-    }
-
-    main {
-        height: 70vmin;
     }
 }
