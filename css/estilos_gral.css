@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --color-primario: #1E1E1E;
+    --color-secundario: #FFD700; 
+    --color-terciario: #cabe7a; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primario); 
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secundario); 
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: var(--color-terciario);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3)); 
+}

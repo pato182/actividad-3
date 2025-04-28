@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --color-primario: #1E1E1E;
+    --color-secundario: #FFD700; 
+    --color-terciario: #cabe7a; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+section ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section ul li {
+    list-style: none;
+    margin: 20px;
+    position: relative;
+    border-radius: 5%;
+    background-color: var(--color-terciario);
+    color: black;
+    box-shadow: 1px 1px 12px #000;
+    display: flex;
+    align-items: center;
+}
+
+section ul li img {
+    width: 50%;
+}
+
+@media screen and (min-width: 650px) {
+    section ul {
+        flex-direction: row;
+    }
+
+    main {
+        height: 50vmin;
+    }
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --color-primario: #1E1E1E;
+    --color-secundario: #FFD700; 
+    --color-terciario: #cabe7a; 
+}
+
+header {
+    width: 100%;
+    background-color: var(--color-primario); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+header img {
+    width: 75vmin;
+    height: auto;
+    filter: drop-shadow(-3px 4px 1px rgba(0, 0, 0, 0.5));
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 0 5px 0;
+    list-style: none;
+}
+
+li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+li a {
+    font-size: 1em;
+    color: var(--color-secundario);
+    text-shadow: 2px 2px 4px #000000fb; 
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+}
+
+li a:hover {
+    color: var(--color-primario); 
+    transform: translateY(-5px);
+}

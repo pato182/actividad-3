@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --color-primario: #1E1E1E;
+    --color-secundario: #FFD700; 
+    --color-terciario: #cabe7a; 
+}
+
+footer {
+    text-align: left;
+    width: 100vmin;
+    margin-top: auto;
+    margin-left: 2%;
+}

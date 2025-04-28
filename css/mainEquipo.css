@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --color-primario: #1E1E1E;
+    --color-secundario: #FFD700; 
+    --color-terciario: #cabe7a; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vmin;
+}
+
+.card {
+    --color-primario: var(--color-terciario); 
+    width: 50vmin;
+    height: 50vmin;
+    margin: 20px;
+    position: relative;     
+    border-radius: 5%;
+    background-color: var(--color-primario); 
+    box-shadow: 1px 1px 12px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.712);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .card-info {
+    opacity: 1;
+}
+
+.card:hover {
+    transition: all 0.5s;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 650px) {
+    section {
+        flex-direction: row;
+    }
+
+    .card {
+        height: 25vmin;
+    }
+
+    main {
+        height: 50vmin;
+    }
+}
